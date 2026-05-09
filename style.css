@@ -1,0 +1,2520 @@
+
+
+
+/* 
+  左上の赤い三角
+ */
+.red-triangle{
+   position: fixed;
+   top: -19vh;
+   left: 7vw;
+   width: 0;
+   height: 0;
+   border-top: 31vh solid red;
+   border-right: 30vw solid transparent;
+   transform: rotate(-143deg);
+   z-index: 11;
+}
+
+
+/* 
+  巻いた紙
+ */
+.rollpaper{
+   position: fixed;
+   top: 14vh;
+   left: 12vw;
+   z-index: 9;
+   transform: rotate(30deg);
+}
+
+
+.rollpaper img{
+   width: clamp(220px, 30vw, 520px);
+   height: auto;
+   display: block;
+}
+
+
+/*
+  上のデニム
+ */
+.denim{
+   position: fixed;
+   top: -2vh;
+   left: 16vw;
+   z-index: 10;
+   pointer-events: none;
+}
+
+
+.denim img{
+   width: clamp(420px, 58vw, 850px);
+   height: auto;
+   display: block;
+}
+
+
+/* 
+  基本レイアウト
+ */
+html, body {
+   margin: 0;
+   height: 100%;
+   overflow: hidden;
+}
+
+
+.container {
+   display: flex;
+   height: 100vh;
+   overflow: hidden;
+}
+
+
+.column{
+   height: 100vh;
+   background-size: cover;
+   background-position: center;
+}
+
+
+.left {
+   flex: 1;
+   background-image: url(images/haikei.jpeg);
+   background-size: cover;
+   background-position: center;
+   position: relative;
+   height: 100vh;
+   z-index: 1;
+   overflow: hidden;
+}
+
+
+
+
+
+.center {
+   flex: 1.2;
+   height: 100vh;     /* 高さを画面いっぱいに固定 */
+   overflow-y: auto;  /* 中身が長い時だけスクロールバーを出す */
+   overflow-x: hidden;
+   background: none;
+   position: relative; /* 中の絶対配置の基準にする */
+}
+
+
+.right {
+   flex: 0 0 230px;
+   min-width: 230px;
+   background-image: url(images/haikei.jpeg);
+   background-size: cover;
+   background-position: center;
+   position: relative;
+   height: 100vh;
+}
+
+
+
+
+
+@media(width <= 1100px){
+    .left{
+        flex: 0.9;
+    }
+
+    .center{
+        flex: 1.4;
+    }
+}
+
+
+/* @media (width <= 1000px){
+    .left{
+        flex: 0.8;
+    }
+
+    .center{
+        flex: 1.5;
+    }
+} */
+
+
+@media screen and (max-width: 1000px) {
+    .mediawrap {
+        display: block; 
+    }
+    .left {
+        flex: 1.2;
+    }
+    .center {
+        flex: 1.4;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .mediawrap {
+        display: block; 
+    }
+    .left {
+        flex: 1.0;
+    }
+    .center {
+        flex: 1.4;
+    }
+}
+
+
+/* 
+  左カラム
+ */
+.umichan-wrap{
+   position: absolute;
+   top: 57%;
+   left: 58%;
+   width: min(78%, 400px);
+   aspect-ratio: 280 / 430;
+   transform: translate(-50%, -50%);
+}
+
+
+.umi{
+   position: absolute;
+   top: 14%;
+   left: 27%;
+   width: 74%;
+   height: auto;
+   display: block;
+   z-index: 2;
+}
+
+
+.denim2{
+   position: absolute;
+   top: 19%;
+   left: -6%;
+   width: 95%;
+   height: auto;
+   z-index: 1;
+}
+
+
+
+
+
+
+
+
+@media(width <= 1200px){
+    .denim2{
+        width: 100%;
+        top: 9%;
+        left: -10%;
+    }
+
+     .umi_apear{
+        height: 45%;
+        width: 80%;
+    }
+
+    .umi{
+    top: 11%;
+    left: 27%;
+    width: 80%;
+}
+
+.umichan-wrap{
+   top: 53%;
+   left: 58%;
+}
+
+
+}
+
+
+
+.umihide{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+@media(width <= 1060px){
+    .umihide{
+        transform: translateY(-10%);
+    }
+}
+
+
+
+.umi_apear{
+    width: 80%; 
+    position: absolute; 
+    top: -800px;
+    left: 0; 
+    opacity: 1;
+    z-index: 40;
+}
+
+@media(width <= 1060px){
+
+     .denim2{
+        width: 110%;
+        top: 1%;
+        left: -10%;
+    }
+
+    .umi_apear{
+        height: 45%;
+        width: 85%;
+    }
+
+      .umi{
+    top: 9%;
+    left: 27%;
+    width: 80%;
+}
+
+.umichan-wrap{
+   top: 59%;
+   left: 58%;
+}
+}
+
+@media(width <= 850px){
+      .denim2{
+        width: 110%;
+        top: 1%;
+    }
+}
+
+@media(width <= 790px){
+    .denim2{
+        height: 55%;
+    }
+}
+
+
+
+
+
+
+
+
+.wan{
+    font-family: "Gamja Flower", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    color: brown;
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    z-index: 1;
+    visibility: hidden;
+}
+
+@media (width <= 1200px){
+    .wan{
+       left: 55%;
+       top: 53%;
+    }
+}
+
+
+
+
+@media(width <= 1100px){
+    .wan{
+        font-size: 40px;
+        top: 55%;
+    }
+}
+
+
+@media(width <= 965px){
+    .wan{
+        font-size: 38px;
+        top: 50%;
+    }
+}
+
+@media(width <= 925px){
+    .wan{
+        left: 40%;
+    }
+}
+
+
+
+
+
+
+:root {
+  --jump-height: -40%; /* デフォルト（PC） */
+}
+
+@media (width <= 1200px) {
+  :root {
+    --jump-height: -80%; 
+  }
+}
+
+@media (950px <= width <= 1060px){
+  :root {
+    --jump-height: -110%; 
+  }
+}
+
+
+
+
+
+/*左パネルの足跡*/
+
+
+.ashiato_leftpanel_l1{
+   position: absolute;
+   top: 92%;
+   z-index: 59;
+   left: 0;
+   width: 40px;
+}
+
+.ashiato_leftpanel_l2{
+    position: absolute;
+    top: 82%;
+    left: 24%;
+    width: 40px;
+}
+
+.ashiato_leftpanel_l3{
+    position: absolute;
+    top: 92%;
+    left: 46%;
+    width: 40px;
+}
+
+.ashiato_leftpanel_l4{
+    position: absolute;
+    top: 82%;
+    left: 68%;
+    width: 40px;
+}
+
+@media(width <= 1300px){
+     .ashiato_leftpanel_l1{
+        width: 37px;
+        top: 105%;
+    }
+
+    .ashiato_leftpanel_l2{
+        width: 37px;
+        top: 94%;
+    }
+
+    .ashiato_leftpanel_l3{
+        width: 37px;
+        top: 105%;
+    }
+
+    .ashiato_leftpanel_l4{
+        width: 37px;
+        top: 94%;
+    }
+}
+
+
+
+
+
+
+@media(width <= 1200px){
+    .ashiato_leftpanel_l1{
+        width: 30px;
+        top: 110%;
+    }
+
+    .ashiato_leftpanel_l2{
+        width: 30px;
+        top: 98%;
+    }
+
+    .ashiato_leftpanel_l3{
+        width: 30px;
+        top: 110%;
+    }
+
+    .ashiato_leftpanel_l4{
+        width: 30px;
+        top: 98%;
+    }
+}
+
+
+
+@media(width <= 1100px){
+    .ashiato_leftpanel_l1{
+        width: 25px;
+        top: 120%;
+    }
+
+    .ashiato_leftpanel_l2{
+        width: 25px;
+        top: 108%;
+    }
+
+    .ashiato_leftpanel_l3{
+        width: 25px;
+        top: 120%;
+    }
+
+    .ashiato_leftpanel_l4{
+        width: 25px;
+        top: 108%;
+    }
+}
+
+
+
+
+
+@media(width <= 1015px){
+    .ashiato_leftpanel_l1{
+        width: 25px;
+        top: 115%;
+    }
+
+    .ashiato_leftpanel_l2{
+        width: 25px;
+        top: 103%;
+    }
+
+    .ashiato_leftpanel_l3{
+        width: 25px;
+        top: 115%;
+    }
+
+    .ashiato_leftpanel_l4{
+        width: 25px;
+        top: 103%;
+    }
+}
+
+
+@media(width <= 900px){
+    .ashiato_leftpanel_l1{
+        width: 20px;
+        top: 120%;
+    }
+
+    .ashiato_leftpanel_l2{
+        width: 20px;
+        top: 109%;
+    }
+
+    .ashiato_leftpanel_l3{
+        width: 20px;
+        top: 120%;
+    }
+
+    .ashiato_leftpanel_l4{
+        width: 20px;
+        top: 109%;
+    }
+}
+
+
+
+/*左パネル足跡ここまで*/
+
+
+/*
+  そのほか装飾
+ */
+.umichan_doll{
+   position: absolute;
+   top: 2%;
+   right: 8%;
+}
+
+.umichan_doll:hover{
+    scale: 1.2;
+}
+
+
+.line{
+   border: 2.5px solid rgb(60, 6, 6);
+}
+
+.hone2{
+    position: absolute;
+    top: 3%;
+    left: 2%;
+}
+
+
+/* 
+  右の看板
+ */
+.sign {
+   position: absolute;
+   right: 10%;
+   top: 40%;
+   transform: translateY(-40%);
+   width: min(98%, 320px);
+   max-width: 250px;
+   aspect-ratio: 250 / 600;
+   z-index: 100;
+}
+
+
+.pole {
+   position: absolute;
+   left: 13%;
+   top: 10%;
+   width: 110%;
+}
+
+
+.nav_item {
+   position: absolute;
+   left: 60%;
+   width: 102%;
+   transform: translateX(-50%);
+   transform-origin: center;
+   transition: transform 0.3s ease;
+}
+
+
+.nav_top {
+   top: 33%;
+}
+
+
+.nav_aboutme {
+   top: 45%;
+}
+
+
+.nav_works {
+   top: 57%;
+}
+
+
+.nav_contact {
+   top: 67%;
+}
+
+
+.mediawrap{
+        display: none;
+        width: 70px;
+    }
+
+.media{
+    width: 70px;
+    height: 180px;
+}
+
+.m_home{
+    height: 100px;
+    width: 60px;
+    position: absolute;
+    top: 10%;
+    z-index: 3;
+}
+
+.m_about{
+    position: absolute;
+    top: 22%;
+    z-index: 4;
+}
+
+.m_works{
+    position: absolute;
+    top: 45%;
+    z-index: 5;
+}
+
+.m_contact{
+    position: absolute;
+    top: 68%;
+    z-index: 90;
+}
+
+
+
+
+
+   @media(width <= 1000px){
+
+
+    .right{
+        display: none;
+    }
+
+    .mediawrap{
+        display: flex;
+        flex-direction: column;
+        width: 90px;
+    }
+
+   }
+
+   @media(width <= 767px){
+
+    .left{
+        display: none;
+    }
+
+    .mediawrap{
+        display: flex;
+        flex-direction: column;
+        width: 60px;
+    }
+
+   }
+
+
+
+
+
+
+/* 
+  中央スクロール
+ */
+.scroll {
+   min-height: 650vh;
+   background-image:
+     linear-gradient(90deg, rgba(161, 227, 236, 0.542) 1px, transparent 1px),
+     linear-gradient(rgba(166, 242, 251, 0.547) 1px, transparent 1px);
+   background-size: 20px 20px;
+   position: relative;
+   z-index: 0;
+}
+/*z-indexを-1とかにすると、フィルムをホバーしたときに動かなくなるので注意する*/
+
+@media (min-height: 800px){
+    .scroll {
+        min-height: 500vh;
+    }
+}
+
+@media (width <= 1100px){
+    .scroll{
+        min-height: 400vh;
+    }
+}
+
+
+
+
+.quiz_wrapper{
+    display: flex;
+    justify-content: center;
+    padding-top: clamp(200px,8vh,120px);
+    gap: 20px;
+}
+
+
+
+.memoimg{
+    margin-top: clamp(450px,20vh,550px);
+}
+
+.umi_run{
+    margin-top: clamp(600px,20vh,800px);
+}
+
+
+
+
+@media(width <= 1210px){
+    .memoimg{
+        margin-right: 20px;
+        width: 300px;
+    }
+
+    .umi_run{
+        margin-left: 60px;
+        width: 150px;
+    }
+}
+
+@media(width <= 800px){
+     .memoimg{
+        margin-right: 20px;
+        width: 250px;
+    }
+
+    .umi_run{
+        margin-left: 60px;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media(width <= 430px){
+    .memoimg{
+        width: 200px;
+        
+    }
+    .umi_run{
+        width: 80px;
+        height: 80px;
+    }
+
+}
+
+
+
+
+
+
+.aboutme_moji{
+    font-family: "Kranky", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 95px;
+    text-align: center;
+    color: rgb(130, 13, 13);
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+@media(width <= 1230px){
+   .aboutme_moji{
+       font-size: 80px;
+}
+}
+
+@media(width <= 767px){
+    .aboutme_moji{
+        font-size: 95px;
+    }
+}
+
+@media(width <= 620px){
+    .aboutme_moji{
+        font-size: 80px;
+    }
+}
+
+@media(width <= 510px){
+    .aboutme_moji{
+        font-size: 70px;
+    }
+}
+
+@media(width <= 460px){
+    .aboutme_moji{
+        font-size: 60px;
+    }
+}
+
+@media(width <= 430px){
+    .aboutme_moji{
+        font-size: 50px;
+    }
+
+    #aboutashi{
+        width: 30px;
+    }
+}
+
+
+
+
+.shokai-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+}
+
+.shokai{
+    width: 600px;
+}
+
+
+.umishokai{
+    width: 600px;
+}
+
+@media (width <= 1340px){
+    .shokai{
+        width: 500px;
+    }
+    .umishokai{
+        width: 500px;
+    }
+}
+
+@media (width <= 1230px){
+    .shokai{
+        width: 450px;
+    }
+    .umishokai{
+        width: 450px;
+    }
+}
+
+@media (width <= 1045px){
+    .shokai{
+        width: 400px;
+    }
+    .umishokai{
+        width: 400px;
+    }
+}
+
+@media(width <= 767px){
+    .shokai{
+        width: 600px;
+    }
+    .umishokai{
+        width: 600px;
+    }
+}
+
+@media(width <= 700px){
+    .shokai{
+        width: 500px;
+    }
+    .umishokai{
+        width: 500px;
+    }
+}
+
+@media(width <= 620px){
+    .shokai{
+        width: 400px;
+    }
+    .umishokai{
+        width: 400px;
+    }    
+}
+
+@media(width <= 480px){
+    .shokai{
+        width: 350px;
+    }
+    .umishokai{
+        width: 350px;
+    }
+}
+
+@media(width <= 450px){
+    .shokai{
+        width: 300px;
+    }
+    .umishokai{
+        width: 300px;
+    }
+}
+
+@media(width <= 400px){
+    .shokai{
+        width: 250px;
+    }
+    .umishokai{
+        width: 250px;
+    }
+}
+
+
+
+#hone1{
+    position: absolute;
+    top: 38%;
+    left: 90%;
+    z-index: 1;
+    cursor: pointer;
+    width: 100px;
+}
+
+@media(width <= 1230px){
+    #hone1{
+        position: absolute;
+        top: 32%;
+    }
+}
+
+@media (width <= 1130px){
+    #hone1{
+        position:absolute;
+        top: 36%;
+        left: 80%;
+    }
+}
+
+@media (width <= 1045px){
+    #hone1{
+        position: absolute;
+        top: 38%;
+        left: 76%;
+    }
+}
+
+@media (width <= 400px){
+    #hone1{
+        position: absolute;
+        top: 38%;
+        left: 76%;
+        width: 60px;
+    }
+}
+
+
+
+#hone1:hover{
+    transform: translateX(-30px);
+}
+
+#ashiato{
+    width: 50px;
+    height: 40px;
+    padding: 20px 30px 15px 10px;
+}
+
+#ashiato2{
+    width: 50px;
+    height: 40px;
+    padding: 50px 10px 20px 40px;
+}
+
+.umi-gron-wrapper{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.umi_neteru{
+    padding: 30px;
+    width: 200px;
+}
+
+@media(width <= 850px){
+    #ashiato{
+    width: 40px;
+    height: 30px;
+    padding: 20px 30px 15px 50px;
+}
+
+#ashiato2{
+    width: 40px;
+    height: 30px;
+    padding: 50px 10px 20px 40px;
+}
+
+.umi_neteru{
+    padding: 20px;
+    width: 150px;
+}
+}
+
+@media(width <= 450px){
+    #ashiato{
+    width: 35px;
+    height: 25px;
+    padding: 20px 30px 15px 50px;
+}
+
+#ashiato2{
+    width: 35px;
+    height: 25px;
+    padding: 50px 10px 20px 40px;
+}
+
+.umi_neteru{
+    padding: 15px;
+    width: 120px;
+}
+}
+
+
+
+
+
+
+
+
+.mywork{
+    font-family: "Kranky", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(73, 11, 11);
+    font-size: 95px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+@media(width <= 1045px){
+    .mywork{
+        font-size: 80px;
+
+    }
+}
+
+@media(width <= 767px){
+    .mywork{
+        font-size: 95px;
+    }
+}
+
+@media(width <= 565px){
+    .mywork{
+        font-size: 80px;
+    }
+}
+
+@media(width <= 460px){
+    .mywork{
+        font-size: 70px;
+
+    }
+}
+
+
+@media(width <= 430px){
+    .mywork{
+        font-size: 60px;
+
+    }
+}
+
+.shinbun-wrapper{
+    padding-top: 30px;
+    background-image: url(images/shinbunkirinuki2.png);
+    background-size: 530px 650px;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    margin-left: 130px;
+}
+
+
+.unmei-box{
+    padding-left: 60px;
+    transform: rotate(45deg);
+}
+
+.unmei_doll{
+    width: 180px;
+    display: block;
+    margin: 0 auto;
+}
+
+.dollimg{
+    width: 100%;
+    height: auto;
+}
+
+@media(width <= 1450px){
+    .shinbun-wrapper{
+        background-size: 500px 600px;
+        /* margin-left: 70px; */
+        text-align: center;
+
+    }
+
+     /* .dollimg{
+        display: block;
+        width: 100px;
+    } */
+
+    .unmei-box{
+        padding-left: 30px;
+    }
+}
+
+
+
+@media(width <= 1380px){
+    .shinbun-wrapper{
+        background-size: 500px 600px;
+        /* margin-left: 70px; */
+        text-align: center;
+        margin-left: 80px;
+
+    }
+
+
+    .unmei-box{
+        padding-left: 30px;
+    }
+}
+
+
+@media(width <= 1200px){
+    .shinbun-wrapper{
+        background-size: 500px 600px;
+        /* margin-left: 70px; */
+        text-align: center;
+        margin-left: 50px;
+
+    }
+
+
+    .unmei-box{
+        padding-left: 30px;
+    }
+}
+
+
+
+
+.move{
+    display: flex;
+}
+
+
+@media(width <= 900px){
+    .shinbun-wrapper{
+        background-size: 450px 550px;
+        margin-left: 20px;
+    }
+}
+
+@media(width <= 767px){
+    .shinbun-wrapper{
+        background-size: 500px 600px;
+        margin-left: 90px;
+    }
+}
+
+@media(width <= 700px){
+    .shinbun-wrapper{
+        background-size: 450px 550px;
+        margin-left: 90px;
+    }
+}
+
+@media(width <= 600px){
+    .shinbun-wrapper{
+        background-size: 400px 500px;
+        margin-left: 60px;
+    }    
+}
+
+@media(width <= 495px){
+    .shinbun-wrapper{
+        background-size: 350px 450px;
+        margin-left: 10px;
+    }
+}
+
+@media(width <= 460px){
+    .shinbun-wrapper{
+        background-size: 300px 450px;
+        margin-left: 10px;
+    }
+}
+
+
+
+.unmei-box:hover{
+    scale: 1.15;
+}
+
+.saveanimal-box{
+    padding-left: 0px;
+    padding-top: -30px;
+}
+
+.animalsimg{
+    width: 220px;
+}
+
+@media (width <= 1340px){
+    .work-thumb{
+        width: 150px;
+   }
+    }
+
+    
+@media (width <= 460px){
+    .work-thumb{
+        width: 120px;
+   }
+    }
+
+.saveanimal-box:hover{
+    scale: 1.1;
+    transform: rotate(20deg);
+}
+
+.story-box{
+    padding-top: 40px;
+    padding-left: 0px;
+}
+
+.story-box:hover{
+    scale:1.2;
+
+}
+
+
+
+
+.umi_kirinuki{
+    cursor: pointer;
+}
+
+
+
+
+.umi_click{
+    display: inline-block; /* transformを有効にするために必要 */
+}
+
+.umi_clickimg{
+    width: 150px;
+}
+
+.umi_click:hover{
+    animation: shake 0.2s infinite;
+}
+
+@media(width <= 500px){
+    .umi_clickimg{
+        width: 120px;
+    }
+}
+
+
+
+@keyframes shake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(2px, 1px) rotate(2deg); }
+  50% { transform: translate(-1px, -2px) rotate(-1deg); }
+  75% { transform: translate(1px, 2px) rotate(1deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+
+.box2-wrapper{
+    display: flex;
+}
+
+.umi-box{
+    margin-top: 70px;
+    margin-left: 80px;
+}
+
+#taso_umi{
+    width: 170px;
+}
+
+@media(width <= 530px){
+    #taso_umi{
+        width: 130px;
+    }
+}
+
+
+@media(width <= 400px){
+    #taso_umi{
+        width: 110px;
+        margin-left: -50px;
+    }
+}
+
+
+
+
+.click{
+    font-family: "Kranky", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: brown;
+    padding-top: 0px;
+    font-size: 45px;
+    padding-left: 70px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media(width <= 1450px){
+.umi_click{
+    padding-right: 180px;
+}
+.click{
+    margin-bottom: 30px;
+}
+}
+
+
+#ashiato3{
+    padding:90px 0px 0px 100px;
+    width: 45px;
+}
+
+#ashiato4{
+    padding: 40px 0 0 0 0;
+    width: 45px;
+}
+
+.ashiato-wrapper{
+    display: flex;
+    height: 100%;
+    gap: 90px;
+}
+
+#ashiato_work_left{
+    padding: 90px 0px 0px 0px;
+    width: 45px;
+}
+
+
+@media(width <= 1285px){
+    #ashiato3{
+        width: 38px;
+    }
+
+    #ashiato4{
+        width: 38px;
+    }
+
+    #ashiato_work_left{
+        width: 38px;
+    }
+}
+
+
+
+
+
+
+.hone3{
+    position: absolute;
+    top: 89%;
+    left: 60%;
+}
+
+.hone4{
+    position: absolute;
+    top: 93%;
+    left: 20%;
+}
+
+
+/*contactここから*/
+
+.content_wrapper{
+    text-align: center;
+    width: 800px;
+}
+
+
+.contact_page{
+    font-family: "Kranky", serif;
+    font-weight: bold;
+    font-style: normal;
+    padding-top: 10px;
+    font-size: 94px;
+    color: rgb(35, 7, 78);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.contact_page::after {
+  content: "";
+  display: inline-block;
+  background-image: url("images/hone.png");
+  background-size: contain;
+  width: 180px;
+  height: 50px; /* 画像の比率に合わせて調整 */
+  vertical-align: middle;
+  background-repeat: no-repeat;
+}
+
+@media (width <= 1400px){
+   .contact_page::after{
+    width: 140px;
+   }
+}
+
+
+
+
+
+.memo_wrapper{
+    width: 700px;
+}
+
+.contact_memo{
+    padding-top: 20px;
+    text-align: center;
+
+}
+
+
+
+
+
+@media (width >= 1450px){
+
+    .contact_memo{
+        text-align: center;
+    }
+
+}
+
+
+@media (width <= 1430px){
+    .contact_memo{
+         width: 600px;
+         text-align: center;
+    }
+
+    .content_wrapper{
+        width: 700px;
+    }
+
+}
+
+@media (width <= 1270px){
+
+    .content_wrapper{
+        width: 650px;
+    }
+
+    .contact_memo{
+        width: 500px;
+    }
+
+    .contact_page{
+        font-size: 85px;
+    }
+
+
+}
+
+@media(width <= 1170px){
+
+
+        .contact_memo{
+        text-align: center;
+    }
+
+
+    .contact_memo_img{
+        width: 450px;
+    }
+
+    .contact_page{
+        font-size: 83px;
+        width: 500px;
+    }
+
+    #hone5{
+        width: 120px;
+    }
+}
+
+
+    
+@media (width <= 1030px){
+
+    .content_wrapper{
+        width: 800px;
+    }
+
+    .contact_memo{
+        text-align: center;
+        width: 470px;
+    }
+
+     .contact_memo_img{
+        width: 450px;
+
+    }
+
+    .contact_page{
+        font-size: 74px;
+        width: 550px;
+    }
+
+    #hone5{
+        width: 100px;
+    }
+}
+
+@media (width <= 1000px){
+
+    .memo_wrapper{
+        width: 400px;
+        text-align: center;
+    }
+
+
+    .contact_page{
+        font-size: 70px;
+        width: 500px;
+    }
+
+     .contact_memo_img{
+        width: 400px;
+        text-align: center;
+    }
+}
+
+@media (width <= 900px){
+    
+    .contact_page{
+        font-size: 70px;
+    }
+
+
+    .contact_memo_img{
+        width: 340px;
+        margin-right: 30px;
+    }
+}
+
+@media(width <= 767px){
+    .contact_page{
+        font-size: 95px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact_memo_img{
+        width: 550px;
+        margin-left: 50px;
+    }
+}
+
+@media(width <= 700px){
+    .contact_page{
+        font-size: 90px;
+        text-align: center;
+        margin-left: 60px;
+    }
+
+    .contact_memo_img{
+        width: 450px;
+    }
+
+}
+
+@media(width <= 610px){
+    .contact_page{
+        font-size: 80px;
+        text-align: center;
+        margin-left: 30px;
+    }
+
+    
+    .contact_memo_img{
+        width: 350px;
+    }
+}
+
+@media(width <= 540px){
+    .contact_page{
+        font-size: 70px;
+        text-align: center;
+        margin-left: 10px;
+    }
+
+    
+    .contact_memo_img{
+        width: 300px;
+        margin-right: 70px;
+    }
+}
+
+@media(width <= 500px){
+    .contact_page{
+        font-size: 60px;
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    
+    .contact_memo_img{
+        width: 270px;
+        margin-right: 100px;
+    }
+}
+
+@media(width <= 465px){
+    .contact_page{
+        font-size: 55px;
+        margin-left: -70px;
+    }
+
+    
+    .contact_memo_img{
+        width: 240px;
+        margin-right: 300px;
+    }
+
+    .contact_page::after{
+        width: 100px;
+   }
+}
+
+@media(width <= 400px){
+    .contact_memo_img{
+        margin-left: 30px;
+    }
+}
+
+
+
+.umi_question_wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+
+.umibozu6_kirinuki{
+    width: 100px;
+}
+
+@media (width <= 900px){
+    .umibozu6_kirinuki{
+        width: 90px;
+    }
+}
+
+@media (width <= 500px){
+    .umibozu6_kirinuki{
+        width: 70px;
+    }
+}
+
+
+.question{
+    font-size: 30px;
+
+}
+
+@media(width <= 1125px){
+    .question{
+        font-size: 21px;
+    }
+
+
+}
+
+@media(width <= 767px){
+    .question{
+        font-size: 30px;
+    }
+}
+
+@media(width <= 700px){
+    .question{
+        font-size: 21px;
+    }
+}
+
+@media(width <= 500px){
+    .question{
+        font-size: 18px;
+    }
+}
+
+.answer_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+
+.answer{
+    font-size: 30px;
+}
+
+.count{
+    font-size: 45px;
+    color: blue;
+    margin:0 80px;
+}
+
+
+
+.answer-btn{
+    background-image: url(images/mstape.png);
+    background-repeat: no-repeat;
+    background-size: 300px 100px;
+    font-size: 32px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    padding: 20px 60px;
+    border-radius: 5%;
+    position: absolute;
+    top: -20%;
+    left: 35%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.thank{
+    color: rgb(2, 2, 101);
+    font-size: 27px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+@media (width <= 1000px){
+
+    .answer-btn{
+        padding: 20px 40px;
+    }
+
+
+
+    .count{
+        font-size: 40px;
+        margin: 0 60px;
+    }
+
+    .answer{
+        font-size: 24px;
+    }
+
+    .thank{
+        font-size: 24px;
+    }
+}
+
+@media(width <= 767px){
+    
+    .answer-btn{
+        padding: 20px 60px;
+    }
+
+
+
+    .count{
+        font-size: 45px;
+        margin: 20px 60px;
+    }
+
+    .answer{
+        font-size: 32px;
+    }
+
+    .thank{
+        font-size: 27px;
+    }
+}
+
+
+
+@media (width <= 700px){
+
+    .answer-btn{
+        padding: 20px 40px;
+    }
+
+
+
+    .count{
+        font-size: 40px;
+        margin: 0 60px;
+    }
+
+    .answer{
+        font-size: 24px;
+    }
+
+    .thank{
+        font-size: 24px;
+    }
+}
+
+
+@media (width <= 500px){
+
+    .answer-btn{
+        padding: 20px 40px;
+        top: -40%;
+         background-image: url(images/tape.png);
+    }
+
+
+
+    .count{
+        font-size: 30px;
+        margin: 0 60px;
+    }
+
+    .answer{
+        font-size: 20px;
+    }
+
+    .thank{
+        font-size: 20px;
+    }
+}
+
+@media(width <= 470px){
+    .question{
+        font-size: 16px;
+    }
+
+    .answer-btn{
+        padding: 30px 60px;
+        margin-bottom: 10px;
+        margin-left: 0;
+        top: -40%;
+        font-size: 20px;
+        background-image: url(images/tape.png);
+    }
+
+    .count{
+        font-size: 30px;
+        margin: 0 30px;
+    }
+
+    .answer{
+        font-size: 18px;
+    }
+
+.umi_question_wrap{
+    padding-top: 10px;
+}
+
+.answer_wrapper{
+    margin-right: 70px;
+}
+}
+
+
+
+/*contactここまで*/
+
+
+
+
+
+/* -----------------
+  少し小さい画面用
+----------------- */
+@media (max-width: 1200px){
+   .umichan-wrap{
+       left: 54%;
+       width: min(80%, 300px);
+   }
+
+
+   .right{
+       flex: 0 0 200px;
+       min-width: 200px;
+   }
+
+
+   .sign{
+       max-width: 220px;
+   }
+}
+
+
+/* -----------------
+  かなり小さい画面用
+----------------- */
+@media (max-width: 1130px){
+   .red-triangle{
+       top: -14vh;
+       left: 6vw;
+       border-top: 22vh solid red;
+       border-right: 26vw solid transparent;
+   }
+
+
+   .rollpaper{
+       top: 8vh;
+       left: 4vw;
+   }
+
+
+   .denim{
+       top: 0vh;
+       left: 10vw;
+   }
+
+
+   /* .umichan-wrap{
+       top: 54%;
+       left: 52%;
+       width: min(82%, 230px);
+   }
+
+
+   .umi{
+       top: 14%;
+       left: 16%;
+       width: 74%;
+   }
+
+
+   .denim2{
+       top: 5%;
+       left: -4%;
+       width: 90%;
+   }
+
+
+   .uminame{
+       left: 52%;
+       bottom: 4%;
+       width: 82%;
+   } */
+
+
+   .right{
+       flex: 0 0 180px;
+       min-width: 180px;
+   }
+
+
+
+
+   .sign{
+       right: 6%;
+       max-width: 190px;
+   }
+}
+
+#draw-u path {
+  opacity: 0;
+}
+
+
+svg {
+    display: block;
+    width: 1500px;
+    max-width: none;
+    height: auto;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-60%); 
+    margin-top: -100px; 
+}
+
+ @media (min-height: 800px) and (max-width: 1500px){
+        svg{
+            width: 1500px;
+            margin-top: -20px;
+        }
+
+        .memoimg{
+            margin-top: 340px;
+        }
+
+        .umi_run{
+            margin-top: 520px;
+        }
+    }
+
+
+@media (width <= 1130px){
+    svg{
+        width: 1450px;
+        aspect-ratio: 3/2;
+        height: auto;
+        transform: translateX(-57%);
+        margin-top: -50px;
+    }
+
+    
+}
+
+@media (width <= 950px){
+    svg{
+        width: 1250px;
+        aspect-ratio: 3/2;
+        height: auto;
+        margin-top: 50px;
+        transform: translateX(-59%);
+    }
+
+}
+
+    @media(width <= 840px) {
+        svg{
+            width: 1150px;
+            aspect-ratio: 3/2;
+            height: auto;
+            margin-top: 50px;
+            transform: translateX(-59%);
+            margin-top: 50px;
+        }
+
+        
+    }
+
+
+      @media(width <= 767px) {
+        svg{
+            width: 1700px;
+            height: auto;
+            margin-top: -50px;
+            transform: translateX(-59%);
+        }
+    }
+
+        @media(width <= 600px) {
+        svg{
+            width: 1300px;
+            height: auto;
+            margin-top: 90px;
+            transform: translateX(-59%);
+        }
+        
+    }
+
+    @media(width <= 475px){
+        svg{
+            width: 1100px;
+            margin-top: 70px;
+        }
+    }
+
+    @media(width <= 410px){
+        svg{
+            width: 950px;
+            margin-top: 100px;
+        }
+    }
+
+
+
+
+
+
+   @media (min-height: 800px) and (max-width: 1500px){
+    .memoimg {
+        margin-top: 620px !important;
+    }
+
+    .umi_run {
+        margin-top: 760px !important;
+    }
+   }
+
+      @media (min-height: 820px) and (max-width: 1140px){
+    .memoimg {
+        margin-top: 400px;
+    }
+
+    .umi_run {
+        margin-top: 300px;
+    }
+   }
+
+
+
+
+/*モーダルここから*/
+
+
+.work-thumb {
+ /* width: 250px; */
+ cursor: pointer;
+}
+
+
+.modal {
+ display: none;
+ position: fixed;
+ inset: 0;
+ background: rgba(0, 0, 0, 0.676);
+ z-index: 999;
+}
+
+
+.modal.is-open {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+
+.modal-inner {
+ position: relative;
+ width: min(80vw, 1200px);
+}
+
+
+.modal-bg{
+    position: absolute;
+    inset: 0;
+    background-image: url("images/sora.jpeg");
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.modal-content{
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+}
+
+@media (max-height: 700px){
+    .modal-content{
+        transform: scale(0.85);
+        transform-origin: top center;
+    }
+}
+
+
+.camera-area {
+ position: relative;
+ width: min(90vw, 750px);
+ margin: 0 auto;
+}
+
+@media (max-height:700px){
+    .camera-area{
+        width: min(90vw,700px);
+        margin-top: 170px;
+    }
+}
+
+
+.camera-bg {
+ width: 100%;
+ display: block;
+}
+
+
+/* カメラの画面部分 */
+.camera-screen {
+ position: absolute;
+ left: 4.5%;
+ top: 28%;
+ width: 65%;
+ height: 70%;
+ object-fit: cover;
+ object-position: center center;
+ border: 3px solid #8a7a00;
+ transform: none;
+}
+
+
+
+.work-text {
+ margin: 30px auto 0;
+ width: min(90%, 800px);
+ padding: 20px;
+ color: #fff;
+ font-size: 20px;
+ line-height: 1.8;
+ background: rgba(50, 80, 40, 0.907);
+ border-radius: 8px;
+}
+
+
+
+
+.nav-btn {
+ position: absolute;
+ top: 45%;
+ transform: translateY(-50%);
+ width: 80px;
+ height: 80px;
+ border: none;
+ border-radius: 50%;
+ background: rgba(6, 193, 206, 0.675);
+ color: white;
+ font-size: 36px;
+ cursor: pointer;
+}
+
+
+.nav-btn:hover {
+ background: rgba(0, 255, 255, 0.9); 
+ box-shadow:
+   0 0 10px rgba(0, 255, 255, 0.9),
+   0 0 20px rgba(0, 255, 255, 0.7),
+   0 0 40px rgba(0, 255, 255, 0.5);
+}
+
+@media(width <= 1130px){
+    .nav-btn {
+ position: absolute;
+ top: 45%;
+ transform: translateY(-50%);
+ width: 80px;
+ height: 80px;
+ border: none;
+ border-radius: 50%;
+ background: rgba(218, 247, 3, 0.675);
+ color: white;
+ font-size: 36px;
+ cursor: pointer;
+}
+
+
+.nav-btn:hover {
+ background: rgba(239, 245, 66, 0.9); 
+ box-shadow:
+   0 0 10px rgba(239, 241, 77, 0.9),
+   0 0 20px rgba(254, 252, 136, 0.7),
+   0 0 40px rgba(242, 229, 146, 0.5);
+}
+}
+
+.prev {
+ left: 30px;
+}
+
+
+.next {
+ right: 30px;
+}
+
+
+.modal-close {
+ position: absolute;
+ padding-top: 30px;
+ top: 100px;
+ right: 20px;
+ font-size: 50px;
+ background: none;
+ border: none;
+ color: rgb(249, 232, 6);
+ cursor: pointer;
+}
+@media (max-height:700px){
+    .modal-close{
+        top: 250px;
+        right: -90px;
+
+
+    }
+}
+
+
+@media(width <= 1000px){
+    .work-text{
+        font-size: 15px;
+    }
+
+    .prev {
+ left: -30px;
+}
+
+
+.next {
+ right: -30px;
+}
+
+
+.camera-bg {
+ width: 80%;
+ height: 110%;
+ display: block;
+ margin-left: 0%;
+}
+
+.camera-screen {
+ position: absolute;
+ left: 3%;
+ top: 30%;
+ width: 52%;
+ height: 70%;
+ object-fit: cover;
+ object-position: center center;
+ border: 3px solid #8a7a00;
+ transform: none;
+}
+
+.modal-close {
+ position: absolute;
+ top: 20%;
+ right: 0%;
+ font-size: 50px;
+ background: none;
+ border: none;
+ color: rgb(249, 232, 6);
+ cursor: pointer;
+}
+}
+
+
+
+
+@media(width <= 450px){
+    .work-text{
+        font-size: 15px;
+    }
+
+    .prev {
+ left: -30px;
+}
+
+
+.next {
+ right: -30px;
+}
+
+
+.camera-bg {
+ width: 90%;
+ height: 110%;
+ display: block;
+ margin-left: -10%;
+}
+
+.camera-screen {
+ position: absolute;
+ left: -7%;
+ top: 32%;
+ width: 65%;
+ height: 70%;
+ object-fit: cover;
+ object-position: center center;
+ border: 3px solid #8a7a00;
+ transform: none;
+}
+
+.modal-close {
+ position: absolute;
+ top: 15%;
+ right: 0%;
+ font-size: 50px;
+ background: none;
+ border: none;
+ color: rgb(249, 232, 6);
+ cursor: pointer;
+}
+}
+
+
+
+
+
+#workUrl,
+#workUrl:visited {
+ color: #00ffff;
+ text-decoration: underline;
+}
+
+
+#workUrl:hover {
+ color: #ffffff;
+}
+
+
+#workUrl:active {
+ color: #00ffff;
+}
+
+
+/*ローディング*/
+#loading{
+    letter-spacing: 0.1em;
+    text-align: center;
+    background-color: rgb(209, 255, 244);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+     height: 100vh;
+    aspect-ratio: 1;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    place-items: center;
+    display: flex;
+    transition: transform 0.8s ease-in-out, opacity 0.8s;
+}
+
+@keyframes chikachika-koma {
+  0%, 49% { transform: rotate(-5deg); } /* 左に傾いて静止 */
+  50%, 99% { transform: rotate(5deg); }  /* 右に傾いて静止 */
+}
+
+
+
+.load-umi{
+    width: 200px;
+    position: absolute; 
+    transform-origin: bottom center; 
+    animation: chikachika-koma 1.2s step-end infinite;
+    top: 39%;
+    left: 43%;
+
+}
+
+
+.load-umi-moji{
+    font-family: "Kranky", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    color: rgb(17, 2, 80);
+    font-weight: bold;
+}
+
+.fukidashi{
+    padding-bottom: 24%;
+    padding-left: 55%;
+
+}
+
+.fukidashiimg{
+    width: 300px;
+}
+
+#loading.is-loaded {
+   transform: translateY(-100%);
+   opacity: 0.8;
+}
+
+@media(width <= 700px){
+    .fukidashi{
+    padding-bottom: 50%;
+    padding-left: 55%;
+}
+
+.fukidashiimg{
+    width: 200px;
+}
+}
+
+
+@media(width <= 450px){
+
+    #loading{
+  
+    background-color: rgb(240, 246, 186);
+  
+}
+    .fukidashi{
+    padding-bottom: 63%;
+    padding-left: 47%;
+}
+
+.fukidashiimg{
+    width: 200px;
+}
+
+
+.load-umi{
+    width: 200px;
+    top: 39%;
+    left: 32%;
+
+}
+}
