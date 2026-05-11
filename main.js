@@ -94,7 +94,7 @@ const works = [
    title: "タイトル：物語メーカー",
    period: "制作期間：10日間",
    skill: "使用したスキル：HTML / CSS / JavaScript",
-   url: "https://hikarusangming7-cmd.github.io/story_maker/"
+   url: "https://hikarusangming7-cmd.github.io/Story__Maker/"
 
 
  }
