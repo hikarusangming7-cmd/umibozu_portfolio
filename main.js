@@ -90,7 +90,7 @@ const works = [
  {
    image: "images/storymakerbg.png",
    moveY: "-20px",
-   category: "作ったもの：ランダムで物語を作るアプリ",
+   category: "作ったもの：物語やキャラクター設定、告白の台詞を考えるアプリ",
    title: "タイトル：物語メーカー",
    period: "制作期間：10日間",
    skill: "使用したスキル：HTML / CSS / JavaScript",
