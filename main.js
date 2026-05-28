@@ -75,7 +75,7 @@ const works = [
    category: "作ったもの：マルチエンディングホラー小説ゲーム",
    title: "タイトル：運命怪談",
    period: "制作期間：製作中",
-   skill: "使用したスキル：React,Tailwind CSS,TypeScript",
+   skill: "使用したスキル：HTML / CSS / JavaScript",
    url: "URL"
  },
  {
