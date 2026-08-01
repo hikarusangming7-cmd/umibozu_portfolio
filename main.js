@@ -92,7 +92,7 @@ const works = [
    moveY: "-20px",
    category: "作ったもの：物語やキャラクター設定、告白の台詞を考えるアプリ",
    title: "タイトル：物語メーカー",
-   period: "制作期間：10日間",
+   period: "制作期間：2週間",
    skill: "使用したスキル：HTML / CSS / JavaScript",
    url: "https://hikarusangming7-cmd.github.io/Story__Maker/"
 
