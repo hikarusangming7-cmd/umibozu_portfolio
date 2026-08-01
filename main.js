@@ -76,7 +76,7 @@ const works = [
    title: "タイトル：運命怪談",
    period: "制作期間：製作中",
    skill: "使用したスキル：HTML / CSS / JavaScript",
-   url: "URL"
+   url: "https://hikarusangming7-cmd.github.io/unmeikaidan/assets/"
  },
  {
    image: "images/wordpress.png",
